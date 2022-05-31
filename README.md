@@ -29,7 +29,7 @@ Note that you require access to the new GitHub Actions for the automated deploym
 1. Edit the `wrangler.toml` file, change the value for `account_id` to your own ([select your account](https://dash.cloudflare.com/), then find your Account ID at the bottom of the side bar)
 1. Add the following secrets to your Cloudflare worker:
 
-   - `CLIENT_ID`, `CLIENT_SECRET`: In your GitHub (OAuth) App's settings page, find `Client ID` and `Client SECRET`
+   - `CLIENT_ID`, `CLIENT_SECRET`: In your GitHub (OAuth) App's settings page, find `Client ID` and `Client SECRET`, due to bug in wrangler [1129](https://github.com/cloudflare/wrangler/issues/1129#issuecomment-1080116037)
 
      ```
      wrangler secret put CLIENT_ID
